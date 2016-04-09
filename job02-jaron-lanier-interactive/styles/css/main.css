@@ -1,0 +1,567 @@
+/* ---------------------------------------------
+GENERAL
+--------------------------------------------- */
+
+/* Custom Fonts */
+@import url(https://fonts.googleapis.com/css?family=Rock+Salt|Coming+Soon|Droid+Serif|Tangerine|VT323); /* "Rock Salt", "Coming Soon", "Droid Serif", "Tangerine", "VT323" */
+
+/* * { outline: 1px dotted #f00; } */
+
+body { 
+	font-family: "Droid Serif", serif; 
+	color: #111; 
+}
+
+a { color: initial; }
+	a:hover { color: initial; }
+
+address {}
+
+
+
+/* ---------------------------------------------
+MAIN CONTAINER
+--------------------------------------------- */
+
+/* Navigation Trigger - Burger Menu */
+#navTrigger { 
+	position: fixed; 
+	top: 1.5em; 
+	left: 1.5em; 
+	padding: 0; 
+	visibility: visible; 
+	opacity: 1; 
+	z-index: 90; 
+	background-color: rgba(0,0,0,0); 
+	border: 0; 
+	transition: opacity 0.5s linear; 
+		-webkit-transition: opacity 0.5s linear; 
+		-moz-transition: opacity 0.5s linear; 
+		-ms-transition: opacity 0.5s linear; 
+		-o-transition: opacity 0.5s linear; 
+}
+.nav-trigger-line { 
+	background-color: #fff; 
+	border: 0.15em solid #000; 
+	border-radius: 20%; 
+	width: 40px; 
+	height: 6px; 
+	margin: 0.5em 0; 
+	transition: all 0.35s ease-out; 
+		-webkit-transition: all 0.35s ease-out; 
+		-moz-transition: all 0.35s ease-out; 
+		-ms-transition: all 0.35s ease-out; 
+		-o-transition: all 0.35s ease-out; 
+}
+	#navTrigger:hover .nav-trigger-line { 
+		background-color: #b1d228; 
+		width: 50px; 
+		height: 7.5px; 
+	}
+#navClose { 
+	position: fixed; 
+	top: 2.5em; 
+	left: 1.5em; 
+	padding: 0; 
+	visibility: hidden; 
+	opacity: 0; 
+	z-index: 90; 
+	background-color: rgba(0,0,0,0); 
+	border: 0; 
+	transform: rotate(90deg); 
+	transition: opacity 0.5s linear; 
+		-webkit-transition: opacity 0.5s linear; 
+		-moz-transition: opacity 0.5s linear; 
+		-ms-transition: opacity 0.5s linear; 
+		-o-transition: opacity 0.5s linear; 
+}
+	.nav-close-line { 
+		background-color: #fff; 
+		border: 0.15em solid #000; 
+		border-radius: 20%; 
+		width: 50px; 
+		height: 7.5px; 
+		margin: 0.5em 0; 
+		transition: all 0.35s ease-out; 
+			-webkit-transition: all 0.35s ease-out; 
+			-moz-transition: all 0.35s ease-out; 
+			-ms-transition: all 0.35s ease-out; 
+			-o-transition: all 0.35s ease-out; 
+	}
+		.nav-close-line:first-child { 
+			margin: 0 auto; 
+			transform: rotate(45deg) translateX(10%); 
+		}
+		.nav-close-line:nth-child(2) { 
+			margin: 0 auto; 
+			transform: rotate(135deg) translate(-10%);
+		}
+	#navClose:hover .nav-close-line { 
+		background-color: #b1d228; 
+		width: 40px; 
+		height: 6px; 
+	}
+/* Navigation Menu - Hidden */
+#nav-main {
+	width: 100vw; 
+	height: 100vh; 
+	position: fixed; 
+	top: 0; 
+	right: 0; 
+	bottom: 0; 
+	left: 0; 
+	visibility: hidden; 
+	opacity: 0; 
+	z-index: 80; 
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b3d11f+0,fefefe+100 */
+	background: #b3d11f; /* Old browsers */
+	background: -moz-linear-gradient(top,  #b3d11f 0%, #fefefe 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #b3d11f 0%,#fefefe 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #b3d11f 0%,#fefefe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3d11f', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
+	transition: opacity 0.5s ease-in-out; 
+		-webkit-transition: opacity 0.5s ease-in-out; 
+		-moz-transition: opacity 0.5s ease-in-out; 
+		-ms-transition: opacity 0.5s ease-in-out; 
+		-o-transition: opacity 0.5s ease-in-out; 
+}
+	#nav-main div { 
+		width: 50%; 
+		height: 100%;
+		position: relative; 
+	}
+	#nav-main div:first-child { float: left; }
+	#nav-main div:nth-child(2) { float: right; }
+	#nav-main div .nav-list { 
+		position: absolute; 
+		top: 50%; 
+		left: 50%; 
+		transform: translate(-50%, -50%); 
+		width: 100%; 
+		padding: 0; 
+		list-style-type: none; 
+		text-align: center; 
+	}
+	#nav-main div .nav-item { margin: 7.5% 0.2em; }
+	#nav-main div .nav-list a:nth-child(2n) .nav-item { 
+		position: relative; 
+		left: 3.5768em; 
+		top: 0.98709324em; 
+		font-size: 1.85em; 
+		color: rgba(0,0,0,0.45); 
+	}
+	#nav-main div .nav-list a:nth-child(2n+1) .nav-item { 
+		position: relative; 
+		right: 3.5768em; 
+		bottom: 0.2343553em;
+		font-size: 1.85em; 
+		color: rgba(155,0,0,0.65); 
+	}
+	#nav-main div .nav-list a:nth-child(3n+2) .nav-item { 
+		position: relative; 
+		right: 3.5768em; 
+		bottom: -1.7343553em;
+		font-size: 1.85em; 
+		color: rgba(0,204,0,0.65); 
+	}
+		#nav-main div .nav-list .nav-item { 
+			transform: rotateY(-180deg); 
+				-webkit-transform: rotateY(-180deg); 
+				-moz-transform: rotateY(-180deg); 
+				-ms-transform: rotateY(-180deg); 
+				-o-transform: rotateY(-180deg); 
+			transition: all 0.5s ease-in-out; 
+				-webkit-transition: all 0.5s ease-in-out; 
+				-moz-transition: all 0.5s ease-in-out; 
+				-ms-transition: all 0.5s ease-in-out; 
+				-o-transition: all 0.5s ease-in-out; 
+		}
+		#nav-main div .nav-list a:hover { text-decoration: none; }
+		#nav-main div .nav-list a .nav-item:hover { 
+			transform: rotateY(0); 
+				-webkit-transform: rotateY(0); 
+				-moz-transform: rotateY(0); 
+				-ms-transform: rotateY(0); 
+				-o-transform: rotateY(0); 
+			color: #000; 
+		}
+		#nav-main div .nav-list a .nav-item:hover::before { content: ">> "; }
+		#nav-main div .nav-list a .nav-item:hover::after { content: " <<"; }
+/* Website Name-Logo */
+#jaron {
+	position: fixed; 
+		top: 2em; 
+		right: 4em; 
+	width: auto; 
+	text-align: center; 
+	z-index: 100; 
+}
+	.letter { 
+		font-size: 4em; 
+		margin: 0.2em;
+		text-shadow: 
+			-1px -1px 0 #fff, 
+			1px -1px 0 #fff, 
+			-1px 1px 0 #fff, 
+			1px 1px 0 #fff; 
+		transition: all 1s ease-out; 
+			-webkit-transition: all 1s ease-out; 
+			-moz-transition: all 1s ease-out; 
+			-ms-transition: all 1s ease-out; 
+			-o-transition: all 1s ease-out; 
+	}
+	#jaron:hover .a1, #jaron:hover .b6 { 
+		text-transform: lowercase; 
+		font-size: 3.25em; 
+		text-shadow: 
+			-1px -1px 0 #a5d0ff, 
+			1px -1px 0 #a5d0ff, 
+			-1px 1px 0 #a5d0ff, 
+			1px 1px 0 #a5d0ff; 
+	}
+	#jaron:hover .a2, #jaron:hover .b1, #jaron:hover .b4 { 
+		text-transform: uppercase; 
+		font-size: 4.25em; 
+		font-family: "Coming Soon", cursive; 
+	}
+	#jaron:hover .a3, #jaron:hover .b2 { 
+		font-variant: petite-caps; 
+		font-size: 3.6513em; 
+		font-family: "Rock Salt", cursive; 
+		text-shadow: 
+			-1px -1px 0 #b1d228, 
+			1px -1px 0 #b1d228, 
+			-1px 1px 0 #b1d228, 
+			1px 1px 0 #b1d228; 
+	}
+	#jaron:hover .a4, #jaron:hover .b3 { 
+		font-variant: petite-caps; 
+		font-size: 4.6513em; 
+		font-family: "Tangerine", cursive; 
+		text-shadow: 
+			-1px -1px 0 #fff580, 
+			1px -1px 0 #fff580, 
+			-1px 1px 0 #fff580, 
+			1px 1px 0 #fff580; 
+	}
+	#jaron:hover .a5, #jaron:hover .b5 { 
+		text-transform: lowercase; 
+		font-size: 5.1375em; 
+		font-family: "VT323", monospace; 
+		text-shadow: 
+			-1px -1px 0 #eb7695, 
+			1px -1px 0 #eb7695, 
+			-1px 1px 0 #eb7695, 
+			1px 1px 0 #eb7695; 
+	}
+	#jaron:hover .a1,
+	#jaron:hover .a2,
+	#jaron:hover .a3,
+	#jaron:hover .a4,
+	#jaron:hover .a5,
+	#jaron:hover .b1,
+	#jaron:hover .b2,
+	#jaron:hover .b3,
+	#jaron:hover .b4,
+	#jaron:hover .b5,
+	#jaron:hover .b6 { 
+		background-color: rgba(0,0,0,0.5); 
+		border-radius: 5%; 
+		border: 1px solid #fff; 
+		padding: 0 0.1em; 
+	}
+
+/* ---------------------------------------------
+ALL "PAGES"
+--------------------------------------------- */
+.page {
+	position: fixed; 
+	top: 0; 
+	right: 0; 
+	bottom: 0; 
+	left: 0; 
+	z-index: 0; 
+	visibility: hidden; 
+	opacity: 0; 
+	background-image: url(../img/pg7-vr-music-2.jpg); 
+	background-color: #11040b; 
+	background-blend-mode: hard-light; 
+	background-position: top; 
+	background-repeat: no-repeat; 
+	background-size: cover; 
+}
+.title {
+	position: fixed; 
+	top: 35%; 
+	left: 60%; 
+	font-size: 2.15em; 
+	color: #111; 
+}
+.title sub { font-size: 0.6em; }
+.text {
+	position: fixed; 
+	top: 42%; 
+	left: 61%; 
+	width: 30%; 
+	padding: 1.5em; 
+	font-size: 1.25em; 
+}
+.source {
+	position: fixed; 
+	top: 62%; 
+	left: 61%; 
+	font-size: 1.25em; 
+}
+	.source::before { content: ">> Source: "; }
+	.source::after { content: " <<"; }
+	.source > a { color: #3a7bb9; }
+#pg1Intro { 
+	bottom: 0%; 
+	visibility: visible; 
+	opacity: 1; 
+	background-image: url(../img/pg1-intro.svg); 
+	background-color: #ccc; 
+	background-blend-mode: normal; 
+}
+	#pg1Intro > .title { opacity: 1; }
+	#pg1Intro > .text { opacity: 1; }
+	#pg1Intro > .source { opacity: 1; }
+#pg2Atari {
+	top: 100%; 
+	visibility: hidden; 
+	opacity: 0; 
+	background-image: url(../img/pg2-alien-garden.jpg); 
+}
+	#pg2Atari > .text {
+		background-color: rgba(150,150,150,0.9); 
+		border-radius: 20px 50px; 
+	}
+	#pg2Atari > .source { color: #969696; }
+#pg3Moondust {
+	right: 100%; 
+	visibility: hidden; 
+	opacity: 0; 
+	background-image: url(../img/pg3-moondust.jpg); 
+}
+	#pg3Moondust > .text {
+		background-color: rgba(150,150,150,0.7); 
+		border-radius: 20px 50px; 
+	}
+	#pg3Moondust > .source { color: #969696; }
+#pg4DataGlove {
+	top: 100%; 
+	visibility: hidden; 
+	opacity: 0; 
+	background-image: url(../img/pg4-power-glove.jpg); 
+}
+	#pg4DataGlove > .text {
+		background-color: rgba(150,150,150,0.35); 
+		border-radius: 20px 50px; 
+		color: #c9c9c9; 
+	}
+	#pg4DataGlove > .source { color: #c9c9c9; }
+	#pg4DataGlove > .source > a { color: #c92d3e; }
+#pg5Surgical {
+	left: 100%; 
+	visibility: hidden; 
+	opacity: 0; 
+	background-image: url(../img/pg5-surgical-simulation-3.jpg); 
+}
+	#pg5Surgical > .text {
+		background-color: rgba(150,150,150,0.35); 
+		border-radius: 20px 50px; 
+		color: #c9c9c9; 
+	}
+	#pg5Surgical > .source { color: #c9c9c9; }
+	#pg5Surgical > .source > a { color: #fff4ba; }
+#pg6VirtualSets { 
+	left: 100%; 
+	visibility: hidden; 
+	opacity: 0; 
+	background-image: url(../img/pg6-virtual-set-1.jpg); 
+}
+	#pg6VirtualSets > .text { 
+		background-color: rgba(0,0,0,0.5); 
+		border-radius: 20px 50px; 
+		color: #ddd; 
+	}
+	#pg6VirtualSets > .source { color: #ddd; }
+	#pg6VirtualSets > .source > a { color: #ed4e48; }
+}
+#pg7Music { 
+	left: 100%; 
+	visibility: hidden; 
+	opacity: 0; 
+/* 	background-image: url(../img/pg7-vr-music-2.jpg); 
+	background-color: #11040b; 
+	background-blend-mode: hard-light;  */
+}
+	#pg7Music > .text { 
+		background-color: rgba(150,150,150,0.35); 
+		border-radius: 20px 50px; 
+		color: #fff; 
+	}
+	#pg7Music > .source { color: #fff; }
+	#pg7Music > .source > a { color: #f12300; }
+#pg8Internet2 {
+	top: 100%; 
+	visibility: hidden; 
+	opacity: 0; 
+	background-image: url(../img/pg8-telepresence-2.png); 
+	background-color: rgb(158,98,95); 
+}
+	#pg8Internet2 > .text {
+		background-color: rgba(150,150,150,0.35); 
+		border-radius: 20px 50px; 
+		color: #fff; 
+	}
+	#pg8Internet2 > .source { color: #fff; }
+	#pg8Internet2 > .source > a { color: #b1d228; }
+#pg9Maoism {
+	top: 100%; 
+	visibility: hidden; 
+	opacity: 0; 
+	background-image: url(../img/pg9-digital-maoism.jpg); 
+}
+	#pg9Maoism > .text {
+		background-color: rgba(0,0,0,0.5); 
+		border-radius: 20px 50px; 
+		color: #fff; 
+	}
+	#pg9Maoism > .source { color: #333; }
+	#pg9Maoism > .source > a { color: #005494; }
+#pg10Kinect {
+	right: 100%; 
+	visibility: hidden; 
+	opacity: 0; 
+	background-image: url(../img/pg10-kinect.jpeg); 
+	background-color: #00a4ef; 
+	background-blend-mode: exclusion;
+}
+	#pg10Kinect > .text {
+		background-color: rgba(97,79,119,0.35); 
+		border-radius: 20px 50px; 
+		color: #fff; 
+	}
+	#pg10Kinect > .source { color: #000; }
+	#pg10Kinect > .source > a { color: #614f77; }
+#pg1Intro, #pg2Atari, #pg3Moondust, #pg4DataGlove, #pg5Surgical, #pg6VirtualSets, #pg7Music, #pg8Internet2, #pg9Maoism, #pg10Kinect { transition: all 1s ease-in; }
+
+
+
+/* ---------------------------------------------
+BADGES, BUTTONS & STICKERS
+--------------------------------------------- */
+#upArrow, #rightArrow, #downArrow, #leftArrow { 
+	position: fixed; 
+	padding: 0; 
+	z-index: 10; 
+	width: 4.5em; 
+	height: 4.5em; 
+	background-color: rgba(0,0,0,1); 
+	border: 0.5em solid #b1d228; 
+		border-radius: 50%;
+	color: #fff; 
+	animation: 0.5s linear 0s infinite alternate arrow_bounce; 
+		-webkit-animation: 0.5s linear 0s infinite alternate arrow_bounce; 
+		-moz-animation: 0.5s linear 0s infinite alternate arrow_bounce; 
+		-ms-animation: 0.5s linear 0s infinite alternate arrow_bounce; 
+		-o-animation: 0.5s linear 0s infinite alternate arrow_bounce;  
+}
+#upArrow { 
+	top: 1.5em; 
+	left: 50%; 
+	transform: rotate(0deg) translate(-50%); 
+	visibility: hidden; 
+	opacity: 0; 
+}
+#rightArrow { 
+	bottom: 50%; 
+	right: 1.5em; 
+	transform: rotate(90deg) translate(50%); 
+	visibility: hidden; 
+	opacity: 0; 
+}
+#downArrow { 
+	bottom: 1.5em; 
+	left: 50%; 
+	transform: rotate(180deg) translate(50%); 
+	visibility: visible; 
+	opacity: 1; 
+}
+#leftArrow { 
+	bottom: 50%; 
+	left: 1.5em; 
+	transform: rotate(270deg) translate(-50%); 
+	visibility: hidden; 
+	opacity: 0; 
+}
+	#upArrow span, #rightArrow span, #downArrow span, #leftArrow span { font-size: 1.75em; }
+		#upArrow:hover, #rightArrow:hover, #downArrow:hover, #leftArrow:hover { border-width: 0.35em; }
+#upArrow, #rightArrow, #downArrow, #leftArrow { 
+	transition: all 0.5s ease-out, opacity 1s ease-in 0.35s; 
+}
+@keyframes arrow_bounce { from { padding-bottom: 0em; } to { padding-bottom: 0.5em; } }
+	@-webkit-keyframes arrow_bounce { from { padding-bottom: 0em; } to { padding-bottom: 0.5em; } }
+	@-moz-keyframes arrow_bounce { from { padding-bottom: 0em; } to { padding-bottom: 0.5em; } }
+	@-ms-keyframes arrow_bounce { from { padding-bottom: 0em; } to { padding-bottom: 0.5em; } }
+	@-o-keyframes arrow_bounce { from { padding-bottom: 0em; } to { padding-bottom: 0.5em; } }
+
+
+
+/* ---------------------------------------------
+DEFINE GENERAL {classes} HERE
+--------------------------------------------- */
+.ctr-text { text-align: center; }
+.ctr-vert { 
+	height: 100%; 
+	display: flex; 
+		display: -webkit-flex; 
+	align-items: center; 
+		-webkit-align-items: center; 
+		-moz-align-items: center; 
+		-ms-align-items: center; 
+		-o-align-items: center; 
+    justify-content: center; 
+		-webkit-justify-content: center; 
+		-moz-justify-content: center; 
+		-ms-justify-content: center; 
+		-o-justify-content: center; 
+}
+.date {}
+.email {}
+.hashtag {}
+.note {}
+.phone {}
+.quote {}
+.stroke-black { 
+	text-shadow: 
+		-1px -1px 0 #000, 
+		1px -1px 0 #000, 
+		-1px 1px 0 #000, 
+		1px 1px 0 #000; 
+}
+.stroke-green { 
+	text-shadow: 
+		-1px -1px 0 #b1d228, 
+		1px -1px 0 #b1d228, 
+		-1px 1px 0 #b1d228, 
+		1px 1px 0 #b1d228; 
+}
+.stroke-white { 
+	text-shadow: 
+		-1px -1px 0 #fff, 
+		1px -1px 0 #fff, 
+		-1px 1px 0 #fff, 
+		1px 1px 0 #fff; 
+}
+.time {}
+
+
+
+
+
+
+
+
+
