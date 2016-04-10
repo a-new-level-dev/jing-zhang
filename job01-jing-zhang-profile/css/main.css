@@ -297,16 +297,15 @@ textarea {
    
 #design {
     background-color: #F6CAC9;
-    padding-top: 40px;
+    padding-top: 20em;
     
 }
 
-#designtext {
-     width: 60%;
-    height: 60%;
+#design-text {
+    width: 60%;
     margin:0 auto;
     font-size: 1.5em;
-    text-align: justify;
+    text-align: center;
     padding-top: 20px;
 
 }
@@ -319,14 +318,14 @@ textarea {
         left: 20%;
     }
 
-#design #wireframes > li {
+#design .wireframes, #design p { text-align: center; }
+
+#design .wireframes li {
     list-style-type: none; 
     display: inline; 
 }
 
-#design #wireframes > li > img {
-    width: 25%; 
-}
+#design .wireframes li > img { width: 15%; }
 
 #contact {
     background-color: #F6CAC9;
