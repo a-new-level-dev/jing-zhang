@@ -297,11 +297,18 @@ textarea {
    
 #design {
     background-color: #F6CAC9;
-    padding-top: 20em;
-    
+    padding-top: 4em;
+    padding-bottom: 2em;
 }
 
-#design-text {
+#projects {
+    width: 96%;
+    height: 90%;
+    margin: 0 auto;
+    padding-top: 13rem;
+}
+
+.design-text {
     width: 60%;
     margin:0 auto;
     font-size: 1.5em;
@@ -310,13 +317,17 @@ textarea {
 
 }
 
-    #design iframe {
-        width: 60%;
-        height: 60%;
-        position: relative;
-        top: 60%;
-        left: 20%;
-    }
+.design-text p span:first-child {
+    font-size: 1.35em;
+    text-decoration: underline;
+}
+
+.design-text p a {
+    text-decoration: none;
+}
+.design-text p a:hover {
+    color: #94a9d0;
+}
 
 #design .wireframes, #design p { text-align: center; }
 
@@ -325,7 +336,12 @@ textarea {
     display: inline; 
 }
 
-#design .wireframes li > img { width: 15%; }
+#design .wireframes li > img { width: 25%; }
+
+#information{
+    padding-top: 5em;
+    
+}
 
 #contact {
     background-color: #F6CAC9;

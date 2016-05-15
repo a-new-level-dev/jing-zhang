@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<HTML lang="en">
+
+<!-- Pg. 1, Jaron Lanier Bio: Home Page -->
+<!-- ********************************************* HEAD: START ********************************************** -->
+<HEAD>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="">
+    <meta name="description" content="A 10 page biography website about Jaron Lanier.">
+    <meta name="keywords" content="jaron, lanier, biography, website, computer, computers, programming, virtual, reality, classical, musician">
+
+	<title>Jaron Lanier: Father of VR</title>
+	<!-- <base href="staging.gflujan.com"> -->
+
+	<!-- VENDOR STYLES -->
+	<link rel="stylesheet" href="styles/css/bootstrap.css">
+
+	<!-- CUSTOM STYLES -->
+	<link rel="stylesheet" href="styles/css/main.css">
+
+</HEAD>
+
+
+<!-- ********************************************* BODY: START ********************************************** -->
+<BODY>
+
+	<!-- MAIN TRUNK OF Intro Page -->
+	<!-- ********************************************* Site Name / Logo ********************************************** -->
+	<a href="" onclick="hideNavigation()">
+		<div id="jaron">
+			<div id="first-name">
+				<span class="letter a1">J</span>
+				<span class="letter a2">a</span>
+				<span class="letter a3">r</span>
+				<span class="letter a4">o</span>
+				<span class="letter a5">n</span>
+			</div>
+			<div id="last-name">
+				<span class="letter b1">L</span>
+				<span class="letter b2">a</span>
+				<span class="letter b3">n</span>
+				<span class="letter b4">i</span>
+				<span class="letter b5">e</span>
+				<span class="letter b6">r</span>
+			</div>
+		</div>
+	</a>
+
+	<!-- ********************************************* The Burger Menu & Closing X ********************************************** -->
+	<button id="navTrigger" onclick="showNavigation();">
+		<div class="nav-trigger-line"></div>
+		<div class="nav-trigger-line"></div>
+		<div class="nav-trigger-line"></div>
+	</button>
+
+	<button id="navClose" onclick="hideNavigation();">
+		<div class="nav-close-line"></div>
+		<div class="nav-close-line"></div>
+	</button>
+
+	<!-- ********************************************* Main Navigation ********************************************** -->
+	<nav id="nav-main">
+		<div>
+			<ul class="nav-list">
+				<a href="#" onclick="navPg2();"><li class="nav-item">[1982] Atari / Alien Garden</li> </a>
+				<a href="#" onclick="navPg3();"><li class="nav-item">[1983] Moondust</li> </a>
+				<a href="#" onclick="navPg4();"><li class="nav-item">[1985-1990] VPL - Data Glove</li> </a>
+				<a href="#" onclick="navPg5();"><li class="nav-item">[1985-1990] VPL - Surgical Simulation</li> </a>
+				<a href="#" onclick="navPg6();"><li class="nav-item">[1985-1990] VPL - Virtual Sets for TV Production</li> </a>
+			</ul>
+		</div>
+		<div>
+			<ul class="nav-list">
+				<a href="#" onclick="navPg7();"><li class="nav-item">[1996] Virtual Reality Music</li> </a>
+				<a href="#" onclick="navPg8();"><li class="nav-item">[1997-2001] Internet2</li> </a>
+				<a href="#" onclick="navPg9();"><li class="nav-item">[2006] Digital Maoism</li> </a>
+				<a href="#" onclick="navPg10();"><li class="nav-item">[2011] Kinect</li> </a>
+			</ul>
+		</div>
+	</nav>
+
+	<button id="upArrow" onclick=""><span>&#8682;</span> </button>
+	<button id="rightArrow" onclick=""><span>&#8682;</span> </button>
+	<button id="downArrow" onclick="pg2SlideUp()"><span>&#8682;</span> </button>
+	<button id="leftArrow" onclick=""><span>&#8682;</span> </button>
+
+	<!-- ********************************************* All "Pages" Content ********************************************** -->
+	<div class="page" id="pg1Intro">
+		<p class="title stroke-green">Who Owns the Future?</p>
+		<p class="source"><a href="http://www.jaronlanier.com/" target="_blank">JaronLanier.com</a> </p>
+		<p class="text">A book by Jaron Lanier, The Father of Virtual Reality</p>
+	</div>
+
+	<div class="page" id="pg2Atari">
+		<p class="title stroke-green">Atari / Alien Garden <sub>{1982}</sub> </p>
+		<p class="text">“The player controls an embryonic animal as it grows, survives and reproduces through 20 generations. Difficulty is introduced through the lack of instructions in the game. As such, the player must employ trial and error techniques to determine which flowers are edible.”</p>
+		<p class="source"><a href="https://en.wikipedia.org/wiki/Alien_Garden" target="_blank">Wikipedia</a> </p>
+	</div>
+
+	<div class="page" id="pg3Moondust">
+		<p class="title stroke-green">Moondust <sub>{1983}</sub> </p>
+		<p class="text">“The unexpected ephemerality of digital data.”</p>
+		<p class="source"><a href="https://en.wikipedia.org/wiki/Moondust_(video_game)" target="_blank">Wikipedia</a> </p>
+	</div>
+
+	<div class="page" id="pg4DataGlove">
+		<p class="title stroke-green">Data Glove <sub>{1985-1990}</sub> </p>
+		<p class="text">“Gestures can then be categorized into useful information, such as to recognize sign language or other symbolic functions.”</p>
+		<p class="source"><a href="https://en.wikipedia.org/wiki/VPL_Research" target="_blank">Wikipedia<sub>1</sub></a> &amp; <a href="https://en.wikipedia.org/wiki/Wired_glove" target="_blank">Wikipedia<sub>2</sub></a> </p>
+	</div>
+
+	<div class="page" id="pg5Surgical">
+		<p class="title stroke-green">Surgical Simulation <sub>{1985-1990}</sub> </p>
+		<p class="text">“Simulators are generally used to train medical students and surgeons…without the use of animals or cadavers."</p>
+		<p class="source"><a href="http://www.jaronlanier.com/general.html" target="_blank">JaronLanier.com</a> &amp; <a href="https://en.wikipedia.org/wiki/Surgery_simulator" target="_blank">Wikipedia</a> </p>
+	</div>
+
+	<div class="page" id="pg6VirtualSets">
+		<p class="title stroke-green">Virtual Sets for TV Production <sub>{1985-1990}</sub> </p>
+		<p class="text">“A key point of a virtual studio is that the real camera can move in 3D space, while the image of the virtual camera is being rendered in real-time from the same perspective.”</p>
+		<p class="source"><a href="http://www.jaronlanier.com/general.html" target="_blank">JaronLanier.com</a> &amp; <a href="https://en.wikipedia.org/wiki/Virtual_studio" target="_blank">Wikipedia</a> </p>
+	</div>
+
+	<div class="page" id="pg7Music">
+		<p class="title stroke-green">Virtual Reality Music <sub>{1996}</sub> </p>
+		<p class="text">“[Flutes are] bent and twisted inside virtual reality by my motions while I play them, which definitely does make new sounds”.</p>
+		<p class="source"><a href="http://www.allmusic.com/artist/jaron-lanier-mn0000178526/biography" target="_blank">Article: AllMusic.com</a> </p>
+	</div>
+
+	<div class="page" id="pg8Internet2">
+		<p class="title stroke-green">Internet2 <sub>{1997-2001}</sub> </p>
+		<p class="text">“A set of technologies which allow a person to feel as if they were present, [to be] at a place other than their true location.”</p>
+		<p class="source"><a href="https://en.wikipedia.org/wiki/Telepresence" target="_blank">Wikipedia</a> </p>
+	</div>
+
+	<div class="page" id="pg9Maoism">
+		<p class="title stroke-green">Digital Maoism <sub>{2006}</sub> </p>
+		<p class="text">“If we start to believe that the Internet itself is an entity that has something to say, we’re devaluing those people [creating the content] and making ourselves into idiots.”</p>
+		<p class="source"><a href="https://en.wikipedia.org/wiki/Jaron_Lanier#Wikipedia_and_the_omniscience_of_collective_wisdom" target="_blank">Wikipedia</a> </p>
+	</div>
+
+	<div class="page" id="pg10Kinect">
+		<p class="title stroke-green">Microsoft Kinect <sub>{2011}</sub> </p>
+		<p class="text">“The most important thing about virtual reality isn’t the idea that you’re seeing this dramatic 3D thing. [It’s] that you experience yourself in a different way than you ever have before.”</p>
+		<p class="source"><a href="http://www.geekwire.com/2011/virtual-reality-visionary-jaron-lanier-microsoft-gig-kinect-beautiful-exciting/" target="_blank">Article: GeekWire.com</a> </p>
+	</div>
+
+	<!-- VENDOR SCRIPTS -->
+	<script src="scripts/vendor/jquery-1.11.2.min.js"></script>
+	<script src="scripts/vendor/bootstrap.js"></script>
+
+	<!-- CUSTOM SCRIPTS -->
+	<script src="scripts/js/main.js"></script>
+
+</BODY>
+
+
+</HTML>
