@@ -1,7 +1,10 @@
+[build]
+base = "/"
+command = "echo 'no command needed'"
+
 [[redirects]]
-# update these to have proper paths once I break up the JZ projects & have proper sub-domains on GFL.com
-from = ""
-to = ""
+from = "https://anl-jz02.netlify.app/*"
+to = "https://jz2.gflujan.com/:splat"
 status = 301
 force = true
 
